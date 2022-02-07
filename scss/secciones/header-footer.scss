@@ -1,0 +1,94 @@
+.header {
+    color: white;
+    padding: 10px;
+    grid-area: header;
+    background-color: black;
+    
+    .logo{
+        position: absolute;
+    }
+    .menu {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        margin-top: 25px;
+    }
+
+    .menu li a{
+        display: inline-block;
+        text-decoration: none;
+        padding: 5px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 10px;
+        font-size: 20px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        color: white;
+        position: relative;
+    
+
+        &::after {
+	        position: absolute;
+	        content: "";
+	        width: 0%;
+	        height: 3px;
+	        background: white;
+	        display: inline-block;
+	        left: 0px;
+	        top: 33px;
+	        transition: .3s ease all;
+        }
+
+        &:hover::after{
+	        width: 100%;
+        }
+
+    }
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    grid-area: footer;
+
+
+    #copy{
+        position: absolute;
+        justify-content: flex-start;
+        margin-top: 15px;
+        margin-left: 10px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .redes{
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .redes i{
+        color: white;
+        margin: 10px;
+    }
+
+    .fa-facebook:hover{
+        color: #1877f2;
+    }
+
+    .fa-instagram:hover{
+        color:#f34d58
+    }
+
+    .fa-linkedin:hover{
+        color:#0a66c2
+    }
+
+    .fa-pinterest:hover{
+        color:#e60023
+    }
+
+}

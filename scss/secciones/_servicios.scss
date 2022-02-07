@@ -1,0 +1,77 @@
+#h1-servicios{
+    padding-top: 4rem;
+    grid-area: h1-servicios;
+}
+
+.seccion-izquierda-servicios{
+    display: flex;
+
+    img{
+        margin-left: 4rem;
+        width: 30rem;
+        height: 50rem;
+    }
+    h2{
+        color: white;
+        margin-left: 40rem;
+        margin-top: 4rem;
+        font-size: 3rem;
+        font-family: 'Rubik', sans-serif;
+        position: absolute;
+    }
+    p{
+        color:white;
+        font-size: 1.5rem;
+        font-family: 'Rubik', sans-serif;
+        padding-top: 10rem;
+        padding-left: 3rem;
+        width: 40rem;
+        text-align: justify;
+        font-weight: 500;
+    } 
+}
+
+.seccion-derecha-servicios {
+    display: flex;
+    justify-content: flex-end;
+    
+    img{
+        margin-right: 4rem;
+        width: 30rem;
+        height: 50rem;
+    }
+    
+    h2{
+        position: absolute;
+        color: white;
+        margin-right: 40rem;
+        margin-top: 4rem;
+        font-size: 3rem;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    p{
+        color:white;
+        font-size: 1.5rem;
+        font-family: 'Rubik', sans-serif;
+        width: 40rem;
+        text-align: justify;
+        font-weight: 500;
+        padding-right: 3rem;
+        padding-top: 10rem;
+    }
+}
+
+#obras{
+    margin-top: 3rem;
+    grid-area: obras;
+}
+
+#decoracion{
+    padding-bottom: 4rem;
+    grid-area: decoracion;
+    
+}
+
+#remodelaciones { grid-area: remodelaciones; }
+#refacciones { grid-area: refacciones; }

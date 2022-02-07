@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+.header {
+  color: white;
+  padding: 10px;
+  grid-area: header;
+  background-color: black; }
+  .header .logo {
+    position: absolute; }
+  .header .menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-top: 25px; }
+  .header .menu li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: white;
+    position: relative; }
+    .header .menu li a::after {
+      position: absolute;
+      content: "";
+      width: 0%;
+      height: 3px;
+      background: white;
+      display: inline-block;
+      left: 0px;
+      top: 33px;
+      transition: .3s ease all; }
+    .header .menu li a:hover::after {
+      width: 100%; }
+
+.footer {
+  background-color: black;
+  color: white;
+  grid-area: footer; }
+  .footer #copy {
+    position: absolute;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: bold; }
+  .footer .redes {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: 10px; }
+  .footer .redes i {
+    color: white;
+    margin: 10px; }
+  .footer .fa-facebook:hover {
+    color: #1877f2; }
+  .footer .fa-instagram:hover {
+    color: #f34d58; }
+  .footer .fa-linkedin:hover {
+    color: #0a66c2; }
+  .footer .fa-pinterest:hover {
+    color: #e60023; }
+
+.h1 {
+  color: white;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  padding-top: 12rem;
+  text-shadow: 0.1rem 0.1rem black; }
+
+.grilla-servicios {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 90px 70px 1fr 1fr 1fr 1fr 50px;
+  gap: 0px 0px;
+  grid-template-areas: "header header" "h1-servicios h1-servicios" "obras ." ". remodelaciones" "refacciones ." ". decoracion" "footer footer";
+  background: #020024;
+  background: linear-gradient(30deg, #020024 0%, #4538bf 85%, #c70ee3 100%); }
+
+#h1-servicios {
+  padding-top: 4rem;
+  grid-area: h1-servicios; }
+
+.seccion-izquierda-servicios {
+  display: flex; }
+  .seccion-izquierda-servicios img {
+    margin-left: 4rem;
+    width: 30rem;
+    height: 50rem; }
+  .seccion-izquierda-servicios h2 {
+    color: white;
+    margin-left: 40rem;
+    margin-top: 4rem;
+    font-size: 3rem;
+    font-family: 'Rubik', sans-serif;
+    position: absolute; }
+  .seccion-izquierda-servicios p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 10rem;
+    padding-left: 3rem;
+    width: 40rem;
+    text-align: justify;
+    font-weight: 500; }
+
+.seccion-derecha-servicios {
+  display: flex;
+  justify-content: flex-end; }
+  .seccion-derecha-servicios img {
+    margin-right: 4rem;
+    width: 30rem;
+    height: 50rem; }
+  .seccion-derecha-servicios h2 {
+    position: absolute;
+    color: white;
+    margin-right: 40rem;
+    margin-top: 4rem;
+    font-size: 3rem;
+    font-family: 'Rubik', sans-serif; }
+  .seccion-derecha-servicios p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    width: 40rem;
+    text-align: justify;
+    font-weight: 500;
+    padding-right: 3rem;
+    padding-top: 10rem; }
+
+#obras {
+  margin-top: 3rem;
+  grid-area: obras; }
+
+#decoracion {
+  padding-bottom: 4rem;
+  grid-area: decoracion; }
+
+#remodelaciones {
+  grid-area: remodelaciones; }
+
+#refacciones {
+  grid-area: refacciones; }

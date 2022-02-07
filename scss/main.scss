@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+
+//VARIABLES
+@import './variables/colores.scss';
+
+//IMPORTACIONES
+@import './secciones/header-footer.scss';
+@import './secciones/h1.scss';
+@import './secciones/grillas.scss';
+@import './secciones/servicios';

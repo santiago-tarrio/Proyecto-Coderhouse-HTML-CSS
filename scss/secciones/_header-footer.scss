@@ -2,7 +2,10 @@
     color: white;
     padding: 10px;
     grid-area: header;
-    background-color: black;
+    
+    &:not(#header-index) {
+        background-color: black;
+      }
     
     .logo{
         position: absolute;

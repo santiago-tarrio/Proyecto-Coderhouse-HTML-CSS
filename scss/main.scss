@@ -9,9 +9,14 @@ html{
 
 //VARIABLES
 @import './variables/colores.scss';
+@import './variables/extend.scss';
 
 //IMPORTACIONES
 @import './secciones/header-footer.scss';
-@import './secciones/h1.scss';
 @import './secciones/grillas.scss';
 @import './secciones/servicios';
+@import './secciones/index';
+@import './secciones/contacto';
+@import './secciones/nosotros';
+@import './secciones/proyectos';
+@import './secciones/mq';

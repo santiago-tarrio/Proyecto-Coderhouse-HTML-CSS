@@ -6,11 +6,18 @@
 html {
   font-size: 10px; }
 
+.seccion-izquierda-servicios p, .seccion-derecha-servicios p, .parrafo-index p, .seccion2-nosotros p, .seccion1-proyectos p {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 550;
+  text-align: justify; }
+
 .header {
   color: white;
   padding: 10px;
-  grid-area: header;
-  background-color: black; }
+  grid-area: header; }
+  .header:not(#header-index) {
+    background-color: black; }
   .header .logo {
     position: absolute; }
   .header .menu {
@@ -72,14 +79,17 @@ html {
   .footer .fa-pinterest:hover {
     color: #e60023; }
 
-.h1 {
-  color: white;
-  text-align: center;
-  font-size: 3.5rem;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 700;
-  padding-top: 12rem;
-  text-shadow: 0.1rem 0.1rem black; }
+.grilla-contacto, .grilla-nosotros, .grilla-proyectos, .grilla-servicios {
+  background: #020024;
+  background: linear-gradient(30deg, #020024 0%, #4538bf 85%, #c70ee3 100%); }
+
+.grilla {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90px 1000px 1100px 50px;
+  gap: 0px 0px;
+  grid-template-areas: "header" "seccion1-index" "seccion2-index" "footer";
+  background-image: url(../assets/Edificio.jpg); }
 
 .grilla-servicios {
   display: grid;
@@ -91,6 +101,37 @@ html {
   grid-template-areas: "header header" "h1-servicios h1-servicios" "obras ." ". remodelaciones" "refacciones ." ". decoracion" "footer footer";
   background: #020024;
   background: linear-gradient(30deg, #020024 0%, #4538bf 85%, #c70ee3 100%); }
+
+.grilla-contacto {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 90px 821px 50px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "header header" "imagen-contacto seccion2-contacto" "footer footer"; }
+
+.grilla-nosotros {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-rows: 100%;
+  grid-template-columns: 35% 35% 30%;
+  grid-template-rows: 90px 1fr 1fr 1fr 50px;
+  gap: 0px 0px;
+  grid-template-areas: "header header header" "imagen-nosotros seccion1-nosotros seccion1-nosotros" "imagen-nosotros seccion1-nosotros seccion1-nosotros" ". seccion2-nosotros iframe-nosotros" "footer footer footer"; }
+
+.imagen-nosotros {
+  grid-area: imagen-nosotros; }
+
+.grilla-proyectos {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 700px 1000px 550px 50px;
+  gap: 0px 0px;
+  grid-template-areas: "header" "seccion1-proyectos" "seccion2-proyectos" "seccion3-proyectos" "footer"; }
 
 #h1-servicios {
   padding-top: 4rem;
@@ -110,14 +151,10 @@ html {
     font-family: 'Rubik', sans-serif;
     position: absolute; }
   .seccion-izquierda-servicios p {
-    color: white;
     font-size: 1.5rem;
-    font-family: 'Rubik', sans-serif;
     padding-top: 10rem;
     padding-left: 3rem;
-    width: 40rem;
-    text-align: justify;
-    font-weight: 500; }
+    width: 40rem; }
 
 .seccion-derecha-servicios {
   display: flex;
@@ -134,12 +171,8 @@ html {
     font-size: 3rem;
     font-family: 'Rubik', sans-serif; }
   .seccion-derecha-servicios p {
-    color: white;
     font-size: 1.5rem;
-    font-family: 'Rubik', sans-serif;
     width: 40rem;
-    text-align: justify;
-    font-weight: 500;
     padding-right: 3rem;
     padding-top: 10rem; }
 
@@ -156,3 +189,493 @@ html {
 
 #refacciones {
   grid-area: refacciones; }
+
+.seccion1-index {
+  display: flex;
+  flex-direction: column;
+  grid-area: seccion1-index; }
+
+.parrafo-index {
+  display: flex;
+  justify-content: center; }
+  .parrafo-index p {
+    font-size: 2.1rem;
+    margin-top: 7rem;
+    width: 80rem;
+    text-shadow: 0.1rem 0.1rem black; }
+
+.boton {
+  width: 120px;
+  height: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  align-self: center;
+  margin-top: 4rem; }
+  .boton span {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; }
+  .boton a {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center; }
+  .boton::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #581ba3;
+    z-index: 1;
+    transition: .3s ease-in-out; }
+  .boton::before {
+    left: -120px; }
+  .boton:hover::before {
+    left: 0px; }
+
+.seccion2-index {
+  background-image: url(../assets/Casa.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  grid-area: seccion2-index; }
+  .seccion2-index .seccion2-index-h2 {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    padding-top: 12rem;
+    text-shadow: 0.1rem 0.1rem black; }
+  .seccion2-index .seccion2-index-parrafo {
+    display: flex;
+    justify-content: center; }
+
+.h1 {
+  color: white;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  padding-top: 12rem;
+  text-shadow: 0.1rem 0.1rem black; }
+
+.imagen-contacto {
+  margin-top: 5rem;
+  margin-left: 7rem;
+  grid-area: imagen-contacto; }
+
+.seccion2-contacto {
+  display: flex;
+  flex-direction: column;
+  grid-area: seccion2-contacto; }
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.seccion2-contacto h1 {
+  margin-left: -25rem; }
+
+.seccion2-contacto input {
+  width: 50rem;
+  height: 4rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #1E0C39;
+  font-size: 1.4rem;
+  font-family: 'Rubik', sans-serif;
+  padding-left: 1rem;
+  margin-left: -25rem;
+  transition: all 1.2s ease-out; }
+  .seccion2-contacto input:hover {
+    transform: scale(1.1); }
+
+#boton-contacto {
+  margin-right: 25rem; }
+
+#imagen-nosotros {
+  margin-top: 8rem;
+  margin-left: 8rem;
+  height: 75rem;
+  width: 50rem; }
+
+.seccion1-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: seccion1-nosotros; }
+  .seccion1-nosotros h1 {
+    margin-left: -10rem; }
+  .seccion1-nosotros p {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    width: 60rem; }
+
+.seccion2-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 8rem;
+  grid-area: seccion2-nosotros; }
+  .seccion2-nosotros h2 {
+    font-size: 2.8rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-right: 15rem; }
+  .seccion2-nosotros p {
+    font-size: 1.5rem;
+    margin-right: 8rem;
+    margin-top: 3rem;
+    width: 40rem; }
+
+.iframe-nosotros {
+  justify-self: end;
+  margin-right: 8rem;
+  margin-top: 8rem;
+  grid-area: iframe-nosotros; }
+
+.seccion1-proyectos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-area: seccion1-proyectos; }
+  .seccion1-proyectos #proyectos-h1 {
+    align-self: center;
+    padding-top: 3.2rem; }
+  .seccion1-proyectos iframe {
+    align-self: center;
+    margin-top: 1.6rem; }
+  .seccion1-proyectos p {
+    width: 25%;
+    align-self: center;
+    margin: 3.2rem;
+    font-size: 1.5rem; }
+
+.proyectos-imagen1 {
+  width: 100%;
+  height: 1000px; }
+
+.carousel {
+  width: 400px; }
+
+.seccion2-proyectos {
+  grid-area: seccion2-proyectos; }
+  .seccion2-proyectos .proyectos-imagen2 {
+    align-self: center;
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+    width: 400px;
+    height: 400px; }
+
+.seccion3-proyectos {
+  margin-bottom: 5vh;
+  justify-self: center;
+  align-self: center;
+  grid-area: seccion3-proyectos; }
+
+@media (max-width: 1400px) {
+  .seccion2-contacto input {
+    margin-left: -10rem; }
+  .seccion2-contacto h1 {
+    margin-left: -10rem; }
+  .imagen-contacto {
+    margin-top: 10rem;
+    margin-left: 7rem;
+    width: 35rem;
+    height: 53rem; }
+  .seccion1-nosotros p {
+    width: 40rem; }
+  #imagen-nosotros {
+    margin-top: 8rem;
+    margin-left: 8rem;
+    height: 53rem;
+    width: 35rem; }
+  .seccion2-nosotros p {
+    margin-right: 12rem; }
+  .proyectos-imagen1 {
+    width: 100%;
+    height: 880px; } }
+
+@media (max-width: 1200px) {
+  .grilla-servicios {
+    gap: 0px 0px;
+    grid-template-rows: 90px 70px 1fr 1fr 1fr 1fr 50px;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "h1-servicios" "obras" "remodelaciones" "refacciones" "decoracion" "footer"; }
+  .grilla-nosotros {
+    grid-template-areas: "header header header" "imagen-nosotros seccion1-nosotros seccion1-nosotros" "imagen-nosotros seccion1-nosotros seccion1-nosotros" "seccion2-nosotros seccion2-nosotros iframe-nosotros" "footer footer footer"; }
+  .seccion2-nosotros p {
+    margin-right: 20rem; }
+  .seccion2-nosotros h2 {
+    margin-right: 20rem; }
+  .proyectos-imagen1 {
+    width: 100%;
+    height: 650px; }
+  .seccion1-proyectos p {
+    width: 70rem; }
+  .grilla-proyectos {
+    grid-template-rows: 90px 569px 653px 560px 50px; } }
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 9px; }
+  .grilla {
+    grid-template-rows: 90px 700px 700px 50px; }
+  .parrafo-index p {
+    width: 70rem; }
+  .menu {
+    display: flex; }
+  .seccion-derecha-servicios h2 {
+    margin-right: 37rem; }
+  .seccion-izquierda-servicios h2 {
+    margin-left: 37rem; }
+  .seccion2-contacto input {
+    width: 35rem; }
+  .seccion2-contacto h1 {
+    font-size: 2.5rem; }
+  .grilla-nosotros {
+    grid-template-columns: 100%;
+    grid-template-rows: 90px 350px 470px 250px 380px 50px;
+    grid-template-areas: "header" "seccion1-nosotros" "imagen-nosotros" "seccion2-nosotros"  "iframe-nosotros" "footer"; }
+  .seccion1-nosotros h1 {
+    margin-left: 0;
+    margin-right: 0; }
+  .seccion1-nosotros p {
+    margin-left: 0;
+    margin-right: 0; }
+  .seccion2-nosotros {
+    align-items: center; }
+    .seccion2-nosotros h2 {
+      margin-left: 0;
+      margin-right: 0; }
+    .seccion2-nosotros p {
+      margin-left: 0;
+      margin-right: 0; }
+  #imagen-nosotros {
+    display: block;
+    margin: auto;
+    margin-top: 4rem; }
+  .iframe-nosotros {
+    justify-self: center;
+    margin-right: 0;
+    margin-top: 0; }
+    .iframe-nosotros iframe {
+      width: 320px;
+      height: 240px; }
+  #boton-contacto {
+    margin-right: 10rem; }
+  .proyectos-imagen1 {
+    height: 620px; }
+  .grilla-proyectos {
+    grid-template-rows: 90px 571px 630px 550px 50px; } }
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 3rem; }
+  .parrafo-index p {
+    width: 60rem; }
+  .seccion-derecha-servicios h2 {
+    margin-right: 37rem; }
+  .seccion-derecha-servicios p {
+    width: 25rem; }
+  .seccion-izquierda-servicios .seccion-izquierda-servicios h2 {
+    margin-left: 37rem; }
+  .seccion-izquierda-servicios .seccion-izquierda-servicios p {
+    width: 25rem; }
+  .grilla-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 520px 600px 50px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "header" "imagen-contacto"  "seccion2-contacto" "footer"; }
+  .seccion2-contacto h1 {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 2rem; }
+  .seccion2-contacto input {
+    margin-left: 0; }
+  .imagen-contacto {
+    display: block;
+    margin: auto;
+    margin-top: 5rem; }
+  #boton-contacto {
+    margin-right: 5rem; }
+  /*proyectos*/
+  .proyectos-imagen1 {
+    width: 100%;
+    height: 440px; }
+  .seccion1-proyectos iframe {
+    width: 336px;
+    height: 189px; }
+  .seccion1-proyectos p {
+    width: 50rem; } }
+
+@media (max-width: 550px) {
+  html {
+    font-size: 7px; }
+  .grilla {
+    grid-template-rows: 60px 500px 600px 50px; }
+  .header {
+    display: block;
+    position: fixed;
+    width: 100%; }
+  .menu {
+    display: flex;
+    list-style-type: none;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center; }
+    .menu a {
+      padding: 5px;
+      margin-top: 10px;
+      font-size: 20px; }
+  .logo {
+    display: none; }
+  #header-index {
+    background-color: black; }
+  .grilla-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 400px 450px 50px; }
+  .imagen-contacto {
+    margin-top: 15rem; }
+  #boton-contacto {
+    margin-top: 1.5rem;
+    height: 45px; }
+  /*proyectos*/
+  .proyectos-imagen1 {
+    width: 100%;
+    height: 350px; }
+  .seccion3-proyectos img {
+    width: 250px;
+    height: 250px; }
+  /*proyecto*/
+  .grilla-proyectos {
+    grid-template-rows: 90px 400px 440px 550px 50px; } }
+
+@media (max-width: 480px) {
+  html {
+    font-size: 7px; }
+  #header-servicios {
+    display: block;
+    position: absolute;
+    width: 100%; }
+  .menu {
+    margin-top: 15px; }
+    .menu a {
+      padding: 5px;
+      margin-top: 0px;
+      font-size: 15px; }
+  .grilla-servicios {
+    gap: 0px 0px;
+    grid-template-rows: 60px 40px 1fr 1fr 1fr 1fr 50px;
+    grid-template-columns: 100vw;
+    grid-template-areas: "header" "h1-servicios" "obras" "remodelaciones" "refacciones" "decoracion" "footer"; }
+  .seccion-izquierda-servicios img {
+    margin-left: 4rem;
+    width: 21rem;
+    height: 35rem; }
+  .seccion-derecha-servicios img {
+    margin-left: 4rem;
+    width: 21rem;
+    height: 35rem; } }
+
+@media (max-width: 400px) {
+  .grilla-servicios {
+    gap: 10px 10px;
+    grid-template-rows: 60px 40px 400px 400px 400px 400px 50px; }
+  .parrafo-index p {
+    width: 45rem; }
+  .menu li a {
+    padding: 4px;
+    margin-top: 8px;
+    font-size: 10px; }
+  #copy {
+    font-size: 10px;
+    margin-top: 10px; }
+  .seccion-izquierda-servicios, .seccion-derecha-servicios {
+    flex-direction: column;
+    align-items: center; }
+  .seccion-izquierda-servicios img {
+    margin-left: 0; }
+  .seccion-izquierda-servicios h2 {
+    color: white;
+    margin-left: 0;
+    margin-top: 38rem;
+    font-size: 3rem;
+    font-family: 'Rubik', sans-serif;
+    position: absolute; }
+  .seccion-izquierda-servicios p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 7rem;
+    padding-left: 0;
+    width: 40rem;
+    text-align: justify;
+    font-weight: 500; }
+  .seccion-derecha-servicios {
+    display: flex;
+    justify-content: flex-start; }
+    .seccion-derecha-servicios img {
+      margin: 0; }
+    .seccion-derecha-servicios h2 {
+      position: absolute;
+      color: white;
+      margin: 0;
+      margin-top: 38rem;
+      font-size: 3rem;
+      font-family: 'Rubik', sans-serif; }
+    .seccion-derecha-servicios p {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Rubik', sans-serif;
+      width: 40rem;
+      text-align: justify;
+      font-weight: 500;
+      padding-right: 0;
+      position: absolute;
+      margin: 0;
+      padding-top: 42rem; }
+  .grilla-nosotros {
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 300px 425px 200px 290px 50px; }
+  .seccion1-proyectos p {
+    width: 40rem; }
+  .seccion1-proyectos iframe {
+    width: 280px;
+    height: 189px; }
+  .carousel {
+    width: 200px; }
+  .proyectos-imagen2 {
+    align-self: center;
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+    width: 200px;
+    height: 200px; } }

@@ -1,0 +1,45 @@
+.imagen-contacto{
+    margin-top: 5rem;
+    margin-left: 7rem;
+    grid-area: imagen-contacto;
+}
+
+.seccion2-contacto{
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion2-contacto;
+}
+
+.form-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion2-contacto{
+    h1{
+        margin-left: -25rem;
+    }
+    input{
+        width: 50rem;
+        height: 4rem;
+        margin-top: 2rem;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #1E0C39;
+        font-size: 1.4rem;
+        font-family: 'Rubik', sans-serif;
+        padding-left: 1rem;
+        margin-left: -25rem;
+        transition: all 1.2s ease-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+//esta tendria que ir en un partial botones//
+#boton-contacto{
+    margin-right: 25rem;
+}

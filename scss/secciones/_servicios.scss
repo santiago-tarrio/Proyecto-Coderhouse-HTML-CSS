@@ -20,14 +20,11 @@
         position: absolute;
     }
     p{
-        color:white;
         font-size: 1.5rem;
-        font-family: 'Rubik', sans-serif;
         padding-top: 10rem;
         padding-left: 3rem;
         width: 40rem;
-        text-align: justify;
-        font-weight: 500;
+        @extend %parrafos;
     } 
 }
 
@@ -51,14 +48,11 @@
     }
     
     p{
-        color:white;
         font-size: 1.5rem;
-        font-family: 'Rubik', sans-serif;
         width: 40rem;
-        text-align: justify;
-        font-weight: 500;
         padding-right: 3rem;
         padding-top: 10rem;
+        @extend %parrafos;
     }
 }
 

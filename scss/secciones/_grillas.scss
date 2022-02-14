@@ -1,0 +1,86 @@
+.grilla-contacto, .grilla-nosotros, .grilla-proyectos, .grilla-servicios{
+  background: rgb(2,0,36);
+  background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgb(69, 56, 191) 85%, rgba(199,14,227,1) 100%);
+}
+
+.grilla {
+  display: grid; 
+  grid-template-columns: 100%; 
+  grid-template-rows: 90px 1000px 1100px 50px; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "header"
+    "seccion1-index"
+    "seccion2-index"
+    "footer"; 
+  
+    background-image: url(../assets/Edificio.jpg);
+  }
+
+.grilla-servicios{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 90px 70px 1fr 1fr 1fr 1fr 50px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header"
+      "h1-servicios h1-servicios"
+      "obras ."
+      ". remodelaciones"
+      "refacciones ."
+      ". decoracion"
+      "footer footer"; 
+  
+     
+    background: $azul-oscuro;
+    background: linear-gradient(30deg, $azul-oscuro 0%, $azul-claro 85%, $violeta 100%);
+    }
+
+.grilla-contacto {  
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 90px 821px 50px;
+      grid-auto-columns: 1fr;
+      grid-auto-rows: 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "header header"
+        "imagen-contacto seccion2-contacto"
+        "footer footer";
+    }
+
+.grilla-nosotros{
+      display: grid; 
+      grid-auto-columns: 100%; 
+      grid-auto-rows: 100%; 
+      grid-template-columns: 35% 35% 30%; 
+      grid-template-rows: 90px 1fr 1fr 1fr 50px; 
+      gap: 0px 0px; 
+      grid-template-areas: 
+        "header header header"
+        "imagen-nosotros seccion1-nosotros seccion1-nosotros"
+        "imagen-nosotros seccion1-nosotros seccion1-nosotros"
+        ". seccion2-nosotros iframe-nosotros"
+        "footer footer footer"; 
+    }
+  
+.imagen-nosotros { grid-area: imagen-nosotros; }
+
+
+.grilla-proyectos{
+  display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 90px 700px 1000px 550px 50px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header"
+      "seccion1-proyectos"
+      "seccion2-proyectos"
+      "seccion3-proyectos"
+      "footer"; 
+  }

@@ -1,0 +1,104 @@
+.seccion1-index{
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion1-index;
+    
+}
+
+
+.parrafo-index{
+    display: flex;
+    justify-content: center;
+    p{
+        font-size: 2.1rem;
+        margin-top: 7rem;
+        width: 80rem;
+        text-shadow: 0.1rem 0.1rem black;
+        @extend %parrafos;
+    }
+}
+
+
+.boton{
+	width: 120px;
+    height: 50px;
+	background-color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	border: none;
+	position: relative;
+	overflow: hidden;
+    align-self: center;
+    margin-top: 4rem;
+    span{
+        color: white;
+        font-family: 'Rubik', sans-serif;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+    a{
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        text-align: center;
+    }
+    &::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #581ba3;
+        z-index: 1;
+        transition: .3s ease-in-out;
+    }
+    
+    &::before{
+        left: -120px;
+    }
+    
+    &:hover::before{
+        left: 0px;
+    }
+}
+
+.seccion2-index{
+    background-image: url(../assets/Casa.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion2-index; 
+    
+    .seccion2-index-h2{
+        color: white;
+        text-align: center;
+        font-size: 3.5rem;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        padding-top: 12rem;
+        text-shadow: 0.1rem 0.1rem black;
+    }
+    .seccion2-index-parrafo{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.h1{
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    padding-top: 12rem;
+    text-shadow: 0.1rem 0.1rem black;
+}
+

@@ -1,0 +1,492 @@
+@media (max-width:1400px){
+
+    .seccion2-contacto{
+        input{
+            margin-left: -10rem;
+        }
+
+        h1{
+            margin-left: -10rem;
+        }
+    }
+    .imagen-contacto{
+        margin-top: 10rem;
+        margin-left: 7rem;
+        width: 35rem;
+        height: 53rem;        
+    }
+    
+
+    .seccion1-nosotros p{
+        width: 40rem;
+    }
+
+    #imagen-nosotros{
+        margin-top: 8rem;
+        margin-left: 8rem;
+        height: 53rem;
+        width: 35rem;
+    }
+
+    .seccion2-nosotros p{
+        margin-right: 12rem;
+    }
+
+    .proyectos-imagen1{
+        width: 100%;
+        height: 880px;
+    }
+}
+
+@media (max-width:1200px){
+    .grilla-servicios{
+        gap: 0px 0px; 
+        grid-template-rows: 90px 70px 1fr 1fr 1fr 1fr 50px; 
+        grid-template-columns: 100%; 
+        grid-template-areas: 
+        "header"
+        "h1-servicios"
+        "obras"
+        "remodelaciones"
+        "refacciones"
+        "decoracion"
+        "footer"; 
+    }
+
+
+    .grilla-nosotros{ 
+        grid-template-areas: 
+          "header header header"
+          "imagen-nosotros seccion1-nosotros seccion1-nosotros"
+          "imagen-nosotros seccion1-nosotros seccion1-nosotros"
+          "seccion2-nosotros seccion2-nosotros iframe-nosotros"
+          "footer footer footer"; 
+      }
+    
+    .seccion2-nosotros{
+        p{
+            margin-right: 20rem;
+        }
+
+        h2{
+            margin-right: 20rem;
+        }
+    }
+    .proyectos-imagen1{
+        width: 100%;
+        height: 650px;
+    }
+
+    .seccion1-proyectos p {
+        width: 70rem;
+    }
+
+    .grilla-proyectos {
+        grid-template-rows: 90px 569px 653px 560px 50px;
+    }
+}
+
+@media (max-width:1024px){
+    html{
+        font-size: 9px;
+    }
+    .grilla{
+        grid-template-rows: 90px 700px 700px 50px;
+
+    }
+    .parrafo-index p{
+        width: 70rem;
+    }
+
+    .menu{
+        display: flex;
+
+    }
+    
+    .seccion-derecha-servicios h2{
+        margin-right: 37rem;
+    }
+
+    .seccion-izquierda-servicios h2{
+        margin-left: 37rem;
+    }
+
+    .seccion2-contacto{
+        input{
+            width: 35rem;
+        }
+
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    .grilla-nosotros{
+        grid-template-columns: 100%; 
+        grid-template-rows: 90px 350px 470px 250px 380px 50px; 
+        grid-template-areas: 
+          "header"
+          "seccion1-nosotros"
+          "imagen-nosotros"
+          "seccion2-nosotros" 
+          "iframe-nosotros"
+          "footer"; 
+      }
+
+    .seccion1-nosotros{
+        h1{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        p{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .seccion2-nosotros{
+        align-items: center;
+        h2{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        p{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    #imagen-nosotros{
+        display: block;
+        margin: auto;
+        margin-top: 4rem;
+    }
+
+    .iframe-nosotros{
+        justify-self: center;
+        margin-right: 0;
+        margin-top: 0;
+        iframe{
+            width: 320px;
+            height: 240px;
+        }
+    }
+
+    #boton-contacto{
+        margin-right: 10rem;
+    }
+
+    .proyectos-imagen1{
+        height: 620px;
+    }
+
+    .grilla-proyectos {
+        grid-template-rows: 90px 571px 630px 550px 50px;
+    }
+}
+
+@media (max-width:768px){
+
+    .h1{
+        font-size: 3rem;
+    }
+
+    .parrafo-index p{
+        width: 60rem;
+    }
+    
+    .seccion-derecha-servicios{
+        h2{
+            margin-right: 37rem;
+        }
+        p{
+            width: 25rem;
+        }
+    }
+
+    .seccion-izquierda-servicios{
+        .seccion-izquierda-servicios h2{
+            margin-left: 37rem;
+        }
+        .seccion-izquierda-servicios p{
+            width: 25rem;
+        }
+    }
+
+    .grilla-contacto {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 520px 600px 50px;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "header"
+          "imagen-contacto" 
+          "seccion2-contacto"
+          "footer";
+      }
+
+    .seccion2-contacto{
+        h1{
+            margin-left: 0;
+            margin-top: 0;
+            padding: 2rem;
+        }
+    
+        input{
+            margin-left: 0;
+        }
+    }
+
+    .imagen-contacto{
+        display: block;
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+    #boton-contacto{
+        margin-right: 5rem;
+    }
+
+    /*proyectos*/
+    .proyectos-imagen1{
+        width: 100%;
+        height: 440px;
+    }
+
+    .seccion1-proyectos iframe{
+        width: 336px;
+        height: 189px;
+    }
+
+    .seccion1-proyectos p {
+        width: 50rem;
+    }
+
+}
+
+@media (max-width:550px){
+
+    html{
+        font-size: 7px;
+    }
+
+    .grilla{
+        grid-template-rows: 60px 500px 600px 50px;
+    }
+
+    
+    .header{
+        display: block;
+        position: fixed;
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        list-style-type: none;
+        margin-top: 25px;
+        align-items: center;
+        justify-content: center;
+        a{
+            padding: 5px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .logo{
+        display: none;
+    }
+
+    #header-index{
+        background-color: black;
+    }
+    
+    .grilla-contacto {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 400px 450px 50px;
+    }
+
+    .imagen-contacto{
+        margin-top: 15rem;
+    }
+
+    #boton-contacto{
+        margin-top: 1.5rem;
+        height: 45px;
+    }
+
+    /*proyectos*/
+    .proyectos-imagen1{
+        width: 100%;
+        height: 350px;
+    }
+
+    .seccion3-proyectos img{
+        width: 250px;
+        height: 250px;
+    }
+
+    /*proyecto*/
+    .grilla-proyectos {
+        grid-template-rows: 90px 400px 440px 550px 50px;
+    }
+}
+
+@media (max-width:480px){
+
+    html{
+        font-size: 7px;
+    }
+    
+    #header-servicios{
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+
+    .menu {
+        margin-top: 15px;
+        a{
+            padding: 5px;
+            margin-top: 0px;
+            font-size: 15px;
+    
+        }
+    }
+
+    .grilla-servicios{
+            gap: 0px 0px; 
+            grid-template-rows: 60px 40px 1fr 1fr 1fr 1fr 50px; 
+            grid-template-columns: 100vw; 
+            grid-template-areas: 
+            "header"
+            "h1-servicios"
+            "obras"
+            "remodelaciones"
+            "refacciones"
+            "decoracion"
+            "footer"; 
+    }
+    
+    .seccion-izquierda-servicios img{
+        margin-left: 4rem;
+        width: 21rem;
+        height: 35rem;
+    }
+
+    .seccion-derecha-servicios img{
+        margin-left: 4rem;
+        width: 21rem;
+        height: 35rem;
+    }
+}
+
+@media (max-width:400px){
+
+    .grilla-servicios{
+        gap: 10px 10px; 
+        grid-template-rows: 60px 40px 400px 400px 400px 400px 50px;
+    }
+    .parrafo-index p{
+        width: 45rem;
+    }
+
+    .menu li a{
+        padding: 4px;
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+    #copy{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    
+    .seccion-izquierda-servicios, .seccion-derecha-servicios{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion-izquierda-servicios{
+        img{
+            margin-left: 0; 
+        }
+        h2{
+            color: white;
+            margin-left: 0;
+            margin-top: 38rem;
+            font-size: 3rem;
+            font-family: 'Rubik', sans-serif;
+            position: absolute;
+        }
+        
+        p{
+            color:white;
+            font-size: 1.5rem;
+            font-family: 'Rubik', sans-serif;
+            padding-top: 7rem;
+            padding-left: 0;
+            width: 40rem;
+            text-align: justify;
+            font-weight: 500;
+        }
+    }
+    
+    .seccion-derecha-servicios{
+        display: flex;
+        justify-content: flex-start;
+        img{
+            margin: 0;
+        }
+        h2{
+            position: absolute;
+            color: white;
+            margin: 0;
+            margin-top: 38rem;
+            font-size: 3rem;
+            font-family: 'Rubik', sans-serif;
+        }
+        p{
+            color:white;
+            font-size: 1.5rem;
+            font-family: 'Rubik', sans-serif;
+            width: 40rem;
+            text-align: justify;
+            font-weight: 500;
+            padding-right: 0;
+            position: absolute;
+            margin: 0;
+            padding-top: 42rem;
+        }
+    }
+
+    .grilla-nosotros {
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 300px 425px 200px 290px 50px;
+    }
+
+    .seccion1-proyectos{
+        p {
+            width: 40rem;
+        }
+        iframe{
+            width: 280px;
+            height: 189px;
+        }
+    }
+    .carousel{
+        width: 200px;
+    }
+    
+    .proyectos-imagen2{
+        align-self: center;
+        margin-top: 4.8rem;
+        margin-bottom: 8rem;
+        width: 200px;
+        height: 200px;
+    }
+}

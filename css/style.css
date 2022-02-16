@@ -6,11 +6,19 @@
 html {
   font-size: 10px; }
 
-.seccion-izquierda-servicios p, .seccion-derecha-servicios p, .parrafo-index p, .seccion2-nosotros p, .seccion1-proyectos p {
+.parrafo-index p, .seccion2-nosotros p, .seccion1-proyectos p {
   color: white;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 550;
   text-align: justify; }
+
+.seccion-izquierda-servicios .containerFotoIzquierda::before, .seccion-izquierda-servicios .containerFotoIzquierda::after, .seccion-derecha-servicios .containerFotoDerecha::before, .seccion-derecha-servicios .containerFotoDerecha::after {
+  content: "";
+  height: 4px;
+  width: 25rem;
+  position: absolute;
+  background-color: #ffffff;
+  transition: .2s ease; }
 
 .header {
   color: white;
@@ -32,8 +40,8 @@ html {
     height: 30px;
     line-height: 30px;
     margin-top: 10px;
-    font-size: 20px;
-    font-family: 'Rubik', sans-serif;
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: white;
     position: relative; }
@@ -95,10 +103,10 @@ html {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 23% 27% 27% 23%;
   grid-template-rows: 90px 70px 1fr 1fr 1fr 1fr 50px;
   gap: 0px 0px;
-  grid-template-areas: "header header" "h1-servicios h1-servicios" "obras ." ". remodelaciones" "refacciones ." ". decoracion" "footer footer";
+  grid-template-areas: "header header header header" ". h1-servicios h1-servicios ." ". obras . ." ". . remodelaciones ." ". refacciones . ." ". . decoracion ." "footer footer footer footer";
   background: #020024;
   background: linear-gradient(30deg, #020024 0%, #4538bf 85%, #c70ee3 100%); }
 
@@ -139,42 +147,106 @@ html {
 
 .seccion-izquierda-servicios {
   display: flex; }
-  .seccion-izquierda-servicios img {
-    margin-left: 4rem;
-    width: 30rem;
-    height: 50rem; }
   .seccion-izquierda-servicios h2 {
     color: white;
-    margin-left: 40rem;
+    margin-left: 4rem;
     margin-top: 4rem;
     font-size: 3rem;
     font-family: 'Rubik', sans-serif;
     position: absolute; }
-  .seccion-izquierda-servicios p {
-    font-size: 1.5rem;
-    padding-top: 10rem;
-    padding-left: 3rem;
-    width: 40rem; }
+  .seccion-izquierda-servicios .containerFotoIzquierda {
+    margin-left: 4rem;
+    margin-top: 8rem;
+    width: 30rem;
+    height: 50rem;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden; }
+    .seccion-izquierda-servicios .containerFotoIzquierda::before {
+      left: -25rem;
+      top: 4rem; }
+    .seccion-izquierda-servicios .containerFotoIzquierda::after {
+      right: -25rem;
+      top: 46rem; }
+    .seccion-izquierda-servicios .containerFotoIzquierda .imagenesIzquierda {
+      width: 100%;
+      height: 100%;
+      transition: .5s ease; }
+    .seccion-izquierda-servicios .containerFotoIzquierda .textoIzquierda {
+      position: absolute;
+      color: white;
+      top: 35%;
+      left: 0;
+      font-size: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 1.5rem;
+      font-family: 'Rubik', sans-serif;
+      text-align: center;
+      opacity: 0;
+      transition: .5s ease; }
+    .seccion-izquierda-servicios .containerFotoIzquierda:hover > .imagenesIzquierda {
+      opacity: 0.4; }
+    .seccion-izquierda-servicios .containerFotoIzquierda:hover > .textoIzquierda {
+      opacity: 1; }
+    .seccion-izquierda-servicios .containerFotoIzquierda:hover::before {
+      left: 0px;
+      z-index: 1; }
+    .seccion-izquierda-servicios .containerFotoIzquierda:hover::after {
+      right: 0px;
+      z-index: 1; }
 
 .seccion-derecha-servicios {
   display: flex;
   justify-content: flex-end; }
-  .seccion-derecha-servicios img {
-    margin-right: 4rem;
-    width: 30rem;
-    height: 50rem; }
   .seccion-derecha-servicios h2 {
     position: absolute;
     color: white;
-    margin-right: 40rem;
+    margin-right: 4rem;
     margin-top: 4rem;
     font-size: 3rem;
     font-family: 'Rubik', sans-serif; }
-  .seccion-derecha-servicios p {
-    font-size: 1.5rem;
-    width: 40rem;
-    padding-right: 3rem;
-    padding-top: 10rem; }
+  .seccion-derecha-servicios .containerFotoDerecha {
+    margin-right: 4rem;
+    margin-top: 8rem;
+    width: 30rem;
+    height: 50rem;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden; }
+    .seccion-derecha-servicios .containerFotoDerecha::before {
+      left: -25rem;
+      top: 4rem; }
+    .seccion-derecha-servicios .containerFotoDerecha::after {
+      right: -25rem;
+      top: 46rem; }
+    .seccion-derecha-servicios .containerFotoDerecha .imagenesDerecha {
+      width: 100%;
+      height: 100%;
+      transition: .5s ease; }
+    .seccion-derecha-servicios .containerFotoDerecha .textoDerecha {
+      position: absolute;
+      color: white;
+      top: 35%;
+      left: 0;
+      font-size: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 1.5rem;
+      font-family: 'Rubik', sans-serif;
+      text-align: center;
+      opacity: 0;
+      transition: .5s ease; }
+    .seccion-derecha-servicios .containerFotoDerecha:hover > .imagenesDerecha {
+      opacity: 0.3; }
+    .seccion-derecha-servicios .containerFotoDerecha:hover > .textoDerecha {
+      opacity: 1; }
+    .seccion-derecha-servicios .containerFotoDerecha:hover::before {
+      left: 0px;
+      z-index: 1; }
+    .seccion-derecha-servicios .containerFotoDerecha:hover::after {
+      right: 0px;
+      z-index: 1; }
 
 #obras {
   margin-top: 3rem;
@@ -200,7 +272,7 @@ html {
   justify-content: center; }
   .parrafo-index p {
     font-size: 2.1rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
     width: 80rem;
     text-shadow: 0.1rem 0.1rem black; }
 
@@ -230,7 +302,7 @@ html {
     text-decoration: none;
     width: 100%;
     display: inline-block;
-    padding-top: 14px;
+    padding-top: 12px;
     padding-bottom: 14px;
     text-align: center; }
   .boton::before {
@@ -256,8 +328,8 @@ html {
   .seccion2-index .seccion2-index-h2 {
     color: white;
     text-align: center;
-    font-size: 3.5rem;
-    font-family: 'Rubik', sans-serif;
+    font-size: 3.8rem;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     padding-top: 12rem;
     text-shadow: 0.1rem 0.1rem black; }
@@ -268,8 +340,8 @@ html {
 .h1 {
   color: white;
   text-align: center;
-  font-size: 3.5rem;
-  font-family: 'Rubik', sans-serif;
+  font-size: 3.8rem;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   padding-top: 12rem;
   text-shadow: 0.1rem 0.1rem black; }
@@ -300,12 +372,9 @@ html {
   border-radius: 4px;
   border: 1px solid #1E0C39;
   font-size: 1.4rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   padding-left: 1rem;
-  margin-left: -25rem;
-  transition: all 1.2s ease-out; }
-  .seccion2-contacto input:hover {
-    transform: scale(1.1); }
+  margin-left: -25rem; }
 
 #boton-contacto {
   margin-right: 25rem; }
@@ -325,13 +394,14 @@ html {
     margin-left: -10rem; }
   .seccion1-nosotros p {
     text-align: justify;
-    font-size: 1.5rem;
-    font-family: 'Rubik', sans-serif;
+    font-size: 1.8rem;
+    font-family: 'Libre Franklin', sans-serif;
     color: white;
     font-weight: 600;
     margin-top: 5rem;
     margin-right: 10rem;
-    width: 60rem; }
+    width: 60rem;
+    line-height: 1.5; }
 
 .seccion2-nosotros {
   display: flex;
@@ -372,7 +442,7 @@ html {
     width: 25%;
     align-self: center;
     margin: 3.2rem;
-    font-size: 1.5rem; }
+    font-size: 1.8rem; }
 
 .proyectos-imagen1 {
   width: 100%;
@@ -404,8 +474,8 @@ html {
   .imagen-contacto {
     margin-top: 10rem;
     margin-left: 7rem;
-    width: 35rem;
-    height: 53rem; }
+    width: 277.77778px;
+    height: 388.88889px; }
   .seccion1-nosotros p {
     width: 40rem; }
   #imagen-nosotros {
@@ -449,9 +519,9 @@ html {
   .menu {
     display: flex; }
   .seccion-derecha-servicios h2 {
-    margin-right: 37rem; }
+    margin-right: 4rem; }
   .seccion-izquierda-servicios h2 {
-    margin-left: 37rem; }
+    margin-left: 4rem; }
   .seccion2-contacto input {
     width: 35rem; }
   .seccion2-contacto h1 {
@@ -497,14 +567,6 @@ html {
     font-size: 3rem; }
   .parrafo-index p {
     width: 60rem; }
-  .seccion-derecha-servicios h2 {
-    margin-right: 37rem; }
-  .seccion-derecha-servicios p {
-    width: 25rem; }
-  .seccion-izquierda-servicios .seccion-izquierda-servicios h2 {
-    margin-left: 37rem; }
-  .seccion-izquierda-servicios .seccion-izquierda-servicios p {
-    width: 25rem; }
   .grilla-contacto {
     display: grid;
     grid-template-columns: 1fr;
@@ -536,7 +598,7 @@ html {
   .seccion1-proyectos p {
     width: 50rem; } }
 
-@media (max-width: 550px) {
+@media (max-width: 580px) {
   html {
     font-size: 7px; }
   .grilla {
@@ -544,7 +606,8 @@ html {
   .header {
     display: block;
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    z-index: 1; }
   .menu {
     display: flex;
     list-style-type: none;
@@ -567,7 +630,8 @@ html {
     margin-top: 15rem; }
   #boton-contacto {
     margin-top: 1.5rem;
-    height: 45px; }
+    height: 45px;
+    margin-left: 20px; }
   /*proyectos*/
   .proyectos-imagen1 {
     width: 100%;
@@ -586,6 +650,9 @@ html {
     display: block;
     position: absolute;
     width: 100%; }
+  .header .menu li a {
+    font-size: 14.5px;
+    padding: 2px; }
   .menu {
     margin-top: 15px; }
     .menu a {
@@ -597,11 +664,7 @@ html {
     grid-template-rows: 60px 40px 1fr 1fr 1fr 1fr 50px;
     grid-template-columns: 100vw;
     grid-template-areas: "header" "h1-servicios" "obras" "remodelaciones" "refacciones" "decoracion" "footer"; }
-  .seccion-izquierda-servicios img {
-    margin-left: 4rem;
-    width: 21rem;
-    height: 35rem; }
-  .seccion-derecha-servicios img {
+  .ContainerFotoIzquierda, .containerFotoDerecha {
     margin-left: 4rem;
     width: 21rem;
     height: 35rem; } }
@@ -622,47 +685,25 @@ html {
   .seccion-izquierda-servicios, .seccion-derecha-servicios {
     flex-direction: column;
     align-items: center; }
-  .seccion-izquierda-servicios img {
+  .seccion-izquierda-servicios .containerFotoIzquierda {
     margin-left: 0; }
   .seccion-izquierda-servicios h2 {
     color: white;
     margin-left: 0;
-    margin-top: 38rem;
     font-size: 3rem;
     font-family: 'Rubik', sans-serif;
     position: absolute; }
-  .seccion-izquierda-servicios p {
-    color: white;
-    font-size: 1.5rem;
-    font-family: 'Rubik', sans-serif;
-    padding-top: 7rem;
-    padding-left: 0;
-    width: 40rem;
-    text-align: justify;
-    font-weight: 500; }
   .seccion-derecha-servicios {
     display: flex;
     justify-content: flex-start; }
-    .seccion-derecha-servicios img {
-      margin: 0; }
     .seccion-derecha-servicios h2 {
       position: absolute;
       color: white;
       margin: 0;
-      margin-top: 38rem;
       font-size: 3rem;
       font-family: 'Rubik', sans-serif; }
-    .seccion-derecha-servicios p {
-      color: white;
-      font-size: 1.5rem;
-      font-family: 'Rubik', sans-serif;
-      width: 40rem;
-      text-align: justify;
-      font-weight: 500;
-      padding-right: 0;
-      position: absolute;
-      margin: 0;
-      padding-top: 42rem; }
+    .seccion-derecha-servicios .containerFotoDerecha {
+      margin-right: 1; }
   .grilla-nosotros {
     grid-template-columns: 100%;
     grid-template-rows: 60px 300px 425px 200px 290px 50px; }

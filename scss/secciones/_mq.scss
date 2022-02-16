@@ -12,8 +12,8 @@
     .imagen-contacto{
         margin-top: 10rem;
         margin-left: 7rem;
-        width: 35rem;
-        height: 53rem;        
+        width: (500px / 1.8);
+        height: (700px / 1.8);           
     }
     
 
@@ -104,11 +104,11 @@
     }
     
     .seccion-derecha-servicios h2{
-        margin-right: 37rem;
+        margin-right: 4rem;
     }
 
     .seccion-izquierda-servicios h2{
-        margin-left: 37rem;
+        margin-left: 4rem;
     }
 
     .seccion2-contacto{
@@ -194,23 +194,7 @@
         width: 60rem;
     }
     
-    .seccion-derecha-servicios{
-        h2{
-            margin-right: 37rem;
-        }
-        p{
-            width: 25rem;
-        }
-    }
 
-    .seccion-izquierda-servicios{
-        .seccion-izquierda-servicios h2{
-            margin-left: 37rem;
-        }
-        .seccion-izquierda-servicios p{
-            width: 25rem;
-        }
-    }
 
     .grilla-contacto {  
         display: grid;
@@ -266,7 +250,7 @@
 
 }
 
-@media (max-width:550px){
+@media (max-width:580px){
 
     html{
         font-size: 7px;
@@ -281,6 +265,7 @@
         display: block;
         position: fixed;
         width: 100%;
+        z-index: 1;
     }
 
     .menu {
@@ -317,6 +302,7 @@
     #boton-contacto{
         margin-top: 1.5rem;
         height: 45px;
+        margin-left: 20px;
     }
 
     /*proyectos*/
@@ -348,6 +334,13 @@
         width: 100%;
     }
 
+    .header{
+        .menu li a{
+            font-size: 14.5px;
+            padding: 2px;
+        }
+    }
+
     .menu {
         margin-top: 15px;
         a{
@@ -372,13 +365,7 @@
             "footer"; 
     }
     
-    .seccion-izquierda-servicios img{
-        margin-left: 4rem;
-        width: 21rem;
-        height: 35rem;
-    }
-
-    .seccion-derecha-servicios img{
+    .ContainerFotoIzquierda, .containerFotoDerecha{
         margin-left: 4rem;
         width: 21rem;
         height: 35rem;
@@ -412,55 +399,30 @@
     }
 
     .seccion-izquierda-servicios{
-        img{
-            margin-left: 0; 
+        
+        .containerFotoIzquierda{
+        margin-left: 0;
         }
         h2{
             color: white;
             margin-left: 0;
-            margin-top: 38rem;
             font-size: 3rem;
             font-family: 'Rubik', sans-serif;
             position: absolute;
         }
-        
-        p{
-            color:white;
-            font-size: 1.5rem;
-            font-family: 'Rubik', sans-serif;
-            padding-top: 7rem;
-            padding-left: 0;
-            width: 40rem;
-            text-align: justify;
-            font-weight: 500;
-        }
     }
-    
     .seccion-derecha-servicios{
         display: flex;
         justify-content: flex-start;
-        img{
-            margin: 0;
-        }
         h2{
             position: absolute;
             color: white;
             margin: 0;
-            margin-top: 38rem;
             font-size: 3rem;
             font-family: 'Rubik', sans-serif;
         }
-        p{
-            color:white;
-            font-size: 1.5rem;
-            font-family: 'Rubik', sans-serif;
-            width: 40rem;
-            text-align: justify;
-            font-weight: 500;
-            padding-right: 0;
-            position: absolute;
-            margin: 0;
-            padding-top: 42rem;
+        .containerFotoDerecha{
+            margin-right: 1;
         }
     }
 

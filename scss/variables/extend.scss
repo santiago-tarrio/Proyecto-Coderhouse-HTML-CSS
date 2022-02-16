@@ -1,7 +1,17 @@
 %parrafos{
     color: white;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-weight: 550;
     text-align: justify;
+}
+
+%beforeAfter{
+    content: "";
+    height: 4px;
+    width: 25rem;
+    position: absolute;
+    background-color: #ffffff;
+    transition: .2s ease;
+
 }
 

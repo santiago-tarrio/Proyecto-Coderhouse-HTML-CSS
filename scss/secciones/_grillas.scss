@@ -17,23 +17,21 @@
     background-image: url(../assets/Edificio.jpg);
   }
 
-.grilla-servicios{
+  .grilla-servicios{
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-auto-rows: 1fr; 
-    grid-template-columns: 50% 50%; 
+    grid-template-columns: 23% 27% 27% 23%; 
     grid-template-rows: 90px 70px 1fr 1fr 1fr 1fr 50px; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "header header"
-      "h1-servicios h1-servicios"
-      "obras ."
-      ". remodelaciones"
-      "refacciones ."
-      ". decoracion"
-      "footer footer"; 
-  
-     
+      "header header header header"
+      ". h1-servicios h1-servicios ."
+      ". obras . ."
+      ". . remodelaciones ."
+      ". refacciones . ."
+      ". . decoracion ."
+      "footer footer footer footer"; 
     background: $azul-oscuro;
     background: linear-gradient(30deg, $azul-oscuro 0%, $azul-claro 85%, $violeta 100%);
     }

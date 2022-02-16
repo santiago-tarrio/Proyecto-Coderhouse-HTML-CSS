@@ -6,53 +6,144 @@
 .seccion-izquierda-servicios{
     display: flex;
 
-    img{
-        margin-left: 4rem;
-        width: 30rem;
-        height: 50rem;
-    }
     h2{
         color: white;
-        margin-left: 40rem;
+        margin-left: 4rem;
         margin-top: 4rem;
         font-size: 3rem;
         font-family: 'Rubik', sans-serif;
         position: absolute;
     }
-    p{
-        font-size: 1.5rem;
-        padding-top: 10rem;
-        padding-left: 3rem;
-        width: 40rem;
-        @extend %parrafos;
-    } 
+
+    .containerFotoIzquierda{
+        margin-left: 4rem;
+        margin-top: 8rem;
+        width: 30rem;
+        height: 50rem;
+        background-color: #000000;
+        position: relative;
+        overflow: hidden;
+    
+        &::before, &::after{
+            @extend %beforeAfter;
+        }
+        &::before{
+            left: -25rem;
+            top: 4rem;
+        }
+
+        &::after{    
+            right: -25rem;
+            top: 46rem;
+        }
+        .imagenesIzquierda{
+            width: 100%;
+            height: 100%;
+            transition: .5s ease;
+        }
+        
+        .textoIzquierda{
+            position: absolute;
+            color: white;
+            top: 35%;
+            left: 0;
+            font-size:30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 1.5rem;
+            font-family: 'Rubik', sans-serif;
+            text-align: center;
+            opacity: 0;
+            transition: .5s ease;
+        }
+        
+        &:hover > .imagenesIzquierda{
+            opacity: 0.4;
+        
+        }
+        
+        &:hover > .textoIzquierda{
+            opacity: 1;
+        }
+        
+        &:hover::before{
+            left: 0px;
+            z-index: 1;
+        }
+        
+        &:hover::after{
+            right: 0px;
+            z-index: 1;
+        }
+    }
 }
 
 .seccion-derecha-servicios {
     display: flex;
     justify-content: flex-end;
     
-    img{
-        margin-right: 4rem;
-        width: 30rem;
-        height: 50rem;
-    }
-    
     h2{
         position: absolute;
         color: white;
-        margin-right: 40rem;
+        margin-right: 4rem;
         margin-top: 4rem;
         font-size: 3rem;
         font-family: 'Rubik', sans-serif;
     }
+    .containerFotoDerecha{
+        margin-right: 4rem;
+        margin-top: 8rem;
+        width: 30rem;
+        height: 50rem;
+        background-color: #000000;
+        position: relative;
+        overflow: hidden;
+        
+        &::before, &::after{
+            @extend %beforeAfter;
+        }
+        &::before{
+            left: -25rem;
+            top: 4rem;
+        }
+        &::after{    
+            right: -25rem;
+            top: 46rem;
+        }
+        .imagenesDerecha{
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+        }
     
-    p{
+        .textoDerecha{
+        position: absolute;
+        color: white;
+        top: 35%;
+        left: 0;
+        font-size:30px;
+        padding-left: 20px;
+        padding-right: 20px;
         font-size: 1.5rem;
-        width: 40rem;
-        padding-right: 3rem;
-        padding-top: 10rem;
-        @extend %parrafos;
+        font-family: 'Rubik', sans-serif;
+        text-align: center;
+        opacity: 0;
+        transition: .5s ease;
+        }
+        &:hover > .imagenesDerecha{
+        opacity: 0.3;
+        }
+        &:hover > .textoDerecha{
+        opacity: 1;
+        } 
+        &:hover::before{
+            left: 0px;
+            z-index: 1;
+        }
+        &:hover::after{
+            right: 0px;
+            z-index: 1;
+        }
     }
 }
 

@@ -36,4 +36,10 @@
 
 #boton-contacto{
     margin-right: 25rem;
+    &::before{
+        background-color: $violeta-boton;
+    }
+    a{
+        padding-top: 13px;
+    }
 }

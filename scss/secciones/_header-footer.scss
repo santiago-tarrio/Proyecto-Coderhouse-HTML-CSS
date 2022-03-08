@@ -24,12 +24,11 @@
         height: 30px;
         line-height: 30px;
         margin-top: 10px;
-        font-size: 2.3rem;
+        font-size: 2.1rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         color: white;
         position: relative;
-    
 
         &::after {
 	        position: absolute;
@@ -42,11 +41,9 @@
 	        top: 33px;
 	        transition: .3s ease all;
         }
-
         &:hover::after{
 	        width: 100%;
         }
-
     }
 }
 
@@ -79,19 +76,19 @@
     }
 
     .fa-facebook:hover{
-        color: #1877f2;
+        color: $facebook;
     }
 
     .fa-instagram:hover{
-        color:#f34d58
+        color: $instagram
     }
 
     .fa-linkedin:hover{
-        color:#0a66c2
+        color: $linkedin
     }
 
     .fa-pinterest:hover{
-        color:#e60023
+        color: $pinterest
     }
 
 }

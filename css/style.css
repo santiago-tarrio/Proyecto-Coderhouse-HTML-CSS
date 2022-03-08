@@ -40,7 +40,7 @@ html {
     height: 30px;
     line-height: 30px;
     margin-top: 10px;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: white;
@@ -88,7 +88,6 @@ html {
     color: #e60023; }
 
 .grilla-contacto, .grilla-nosotros, .grilla-proyectos, .grilla-servicios {
-  background: #020024;
   background: linear-gradient(30deg, #020024 0%, #4538bf 85%, #c70ee3 100%); }
 
 .grilla {
@@ -97,7 +96,7 @@ html {
   grid-template-rows: 90px 1000px 1100px 50px;
   gap: 0px 0px;
   grid-template-areas: "header" "seccion1-index" "seccion2-index" "footer";
-  background-image: url(../assets/Edificio.jpg); }
+  background-image: url(../assets/Edificio.jpeg); }
 
 .grilla-servicios {
   display: grid;
@@ -272,9 +271,10 @@ html {
   justify-content: center; }
   .parrafo-index p {
     font-size: 2.1rem;
-    margin-top: 5rem;
-    width: 80rem;
-    text-shadow: 0.1rem 0.1rem black; }
+    margin-top: 10rem;
+    width: 65rem;
+    text-shadow: 0.2rem 0.2rem black;
+    font-weight: 650; }
 
 .boton {
   width: 120px;
@@ -302,7 +302,7 @@ html {
     text-decoration: none;
     width: 100%;
     display: inline-block;
-    padding-top: 12px;
+    padding-top: 11px;
     padding-bottom: 14px;
     text-align: center; }
   .boton::before {
@@ -311,13 +311,42 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #581ba3;
+    background: #4538bf;
     z-index: 1;
     transition: .3s ease-in-out; }
   .boton::before {
     left: -120px; }
   .boton:hover::before {
     left: 0px; }
+
+.scrollIndex {
+  align-self: center;
+  margin-top: 22rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: black;
+  position: relative;
+  overflow: hidden; }
+  .scrollIndex i {
+    position: relative;
+    color: white;
+    margin-left: 11.5px;
+    margin-top: 1px;
+    z-index: 2; }
+  .scrollIndex::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #4538bf;
+    z-index: 1;
+    transition: .3s ease-in-out; }
+  .scrollIndex::before {
+    bottom: -60px; }
+  .scrollIndex:hover::before {
+    bottom: 0px; }
 
 .seccion2-index {
   background-image: url(../assets/Casa.jpg);
@@ -378,6 +407,10 @@ html {
 
 #boton-contacto {
   margin-right: 25rem; }
+  #boton-contacto::before {
+    background-color: #581ba3; }
+  #boton-contacto a {
+    padding-top: 13px; }
 
 #imagen-nosotros {
   margin-top: 8rem;
@@ -515,9 +548,33 @@ html {
   .grilla {
     grid-template-rows: 90px 700px 700px 50px; }
   .parrafo-index p {
-    width: 70rem; }
+    width: 70rem;
+    font-size: 1.7rem; }
   .menu {
     display: flex; }
+  .boton {
+    width: 100px;
+    height: 35px;
+    margin-top: 10px; }
+    .boton span {
+      font-size: 15px; }
+    .boton a {
+      padding-top: 5px;
+      padding-bottom: 0; }
+    .boton::before {
+      left: -100px; }
+  .scrollIndex {
+    margin-top: 18rem;
+    height: 45px;
+    width: 45px; }
+    .scrollIndex i {
+      position: relative;
+      color: white;
+      margin-left: 5px;
+      margin-top: -2px;
+      z-index: 2; }
+    .scrollIndex::before {
+      bottom: -45px; }
   .seccion-derecha-servicios h2 {
     margin-right: 4rem; }
   .seccion-izquierda-servicios h2 {
@@ -566,7 +623,8 @@ html {
   .h1 {
     font-size: 3rem; }
   .parrafo-index p {
-    width: 60rem; }
+    width: 60rem;
+    margin-top: 5rem; }
   .grilla-contacto {
     display: grid;
     grid-template-columns: 1fr;
@@ -601,13 +659,23 @@ html {
 @media (max-width: 580px) {
   html {
     font-size: 7px; }
+  .h1 {
+    padding-top: 80px;
+    font-size: 2.5rem; }
+  .seccion2-index .seccion2-index-h2 {
+    font-size: 2.5rem; }
+  .parrafo-index p {
+    margin-top: 12px; }
   .grilla {
-    grid-template-rows: 60px 500px 600px 50px; }
+    grid-template-rows: 60px 450px 500px 50px; }
   .header {
     display: block;
     position: fixed;
     width: 100%;
-    z-index: 1; }
+    z-index: 3;
+    padding: 5px; }
+    .header .menu {
+      margin-top: 0; }
   .menu {
     display: flex;
     list-style-type: none;
@@ -622,6 +690,12 @@ html {
     display: none; }
   #header-index {
     background-color: black; }
+  .scrollIndex {
+    display: none; }
+  .footer #copy {
+    display: none; }
+  .footer ul {
+    margin-top: 8px; }
   .grilla-contacto {
     display: grid;
     grid-template-columns: 1fr;
@@ -630,7 +704,7 @@ html {
     margin-top: 15rem; }
   #boton-contacto {
     margin-top: 1.5rem;
-    height: 45px;
+    height: 35px;
     margin-left: 20px; }
   /*proyectos*/
   .proyectos-imagen1 {
@@ -674,7 +748,7 @@ html {
     gap: 10px 10px;
     grid-template-rows: 60px 40px 400px 400px 400px 400px 50px; }
   .parrafo-index p {
-    width: 45rem; }
+    width: 38rem; }
   .menu li a {
     padding: 4px;
     margin-top: 8px;
@@ -704,9 +778,15 @@ html {
       font-family: 'Rubik', sans-serif; }
     .seccion-derecha-servicios .containerFotoDerecha {
       margin-right: 1; }
+  #obras {
+    margin-top: 0; }
   .grilla-nosotros {
     grid-template-columns: 100%;
     grid-template-rows: 60px 300px 425px 200px 290px 50px; }
+  .grilla-proyectos {
+    grid-template-rows: 60px 260px 0px 550px 50px; }
+  .proyectos-imagen1 {
+    display: none; }
   .seccion1-proyectos p {
     width: 40rem; }
   .seccion1-proyectos iframe {

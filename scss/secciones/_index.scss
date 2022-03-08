@@ -11,10 +11,11 @@
     justify-content: center;
     p{
         font-size: 2.1rem;
-        margin-top: 5rem;
-        width: 80rem;
-        text-shadow: 0.1rem 0.1rem black;
+        margin-top: 10rem;
+        width: 65rem;
+        text-shadow: 0.2rem 0.2rem black;
         @extend %parrafos;
+        font-weight: 650;
     }
 }
 
@@ -46,7 +47,7 @@
         text-decoration: none;
         width: 100%;
         display: inline-block;
-        padding-top: 12px;
+        padding-top: 11px;
         padding-bottom: 14px;
         text-align: center;
     }
@@ -56,7 +57,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #581ba3;
+        background: $azul-claro;
         z-index: 1;
         transition: .3s ease-in-out;
     }
@@ -67,6 +68,41 @@
     
     &:hover::before{
         left: 0px;
+    }
+}
+
+.scrollIndex{
+    align-self: center;
+    margin-top: 22rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+	overflow: hidden;
+    i{
+        position: relative;
+        color: white;
+        margin-left: 11.5px;
+        margin-top: 1px;
+        z-index: 2;
+    }
+    &::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $azul-claro;
+        z-index: 1;
+        transition: .3s ease-in-out;
+    }
+    &::before{
+        bottom: -60px;
+    }
+    
+    &:hover::before{
+        bottom: 0px;
     }
 }
 

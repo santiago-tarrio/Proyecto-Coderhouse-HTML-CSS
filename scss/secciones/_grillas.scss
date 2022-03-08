@@ -1,6 +1,5 @@
 .grilla-contacto, .grilla-nosotros, .grilla-proyectos, .grilla-servicios{
-  background: rgb(2,0,36);
-  background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgb(69, 56, 191) 85%, rgba(199,14,227,1) 100%);
+  background: linear-gradient(30deg, $azul-oscuro 0%, $azul-claro 85%, $violeta 100%);
 }
 
 .grilla {
@@ -14,7 +13,7 @@
     "seccion2-index"
     "footer"; 
   
-    background-image: url(../assets/Edificio.jpg);
+    background-image: url(../assets/Edificio.jpeg);
   }
 
   .grilla-servicios{
